@@ -1,0 +1,19 @@
+
+public class SimpleLoop {
+
+	public static void main(String[] args) 
+	{
+		
+		countSomeNums();
+
+	}
+	
+	private static void countSomeNums() 
+	{
+		for (int i = -4; i < 100; i += 18) 
+		{
+			System.out.println(i);
+		}
+	}
+
+}
