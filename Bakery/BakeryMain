@@ -21,17 +21,18 @@ public class BakeryMain
 	 */
 
 	public static void main(String[] args) 
-  {
-    Cake myFirstCake = new Cake("Carrot");
-		
+  	{
+		// declare a new object, cake and flavor
+    		Cake myFirstCake = new Cake("Carrot");
+		// create a method that gets the flavor of the cake
 		myFirstCake.getFlavor();
-		
+		// create a method that prints that the cake is tastty
 		Cake.tellIfTasty();
-		
+		// create a method that gets the amount of layers
 		myFirstCake.getLayers();
-		
+		// create a method that sets the flavor of the cake
 		myFirstCake.setFlavor();
-		
+		// create a method that adds 1 layer to the cake
 		myFirstCake.incrementLayer();
 
 	}
