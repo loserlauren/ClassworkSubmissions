@@ -1,0 +1,49 @@
+/**
+ * This class will create a cake and set certain 
+ * properties to it, using methods and constructors
+ */
+public class Cake 
+{
+	// declare a string that sets the flavor of the cake
+	String flavor = new String("Carrot");
+	// declare an int for the amount of layers 
+	int layers = 12;
+	
+	// create a constructor that sets the flavor and layers to a method
+	public Cake (String flavor, int layers) 
+	{
+		this.flavor = flavor;
+		this.layers = layers;
+	}
+	// set the layers equal to 1
+	public Cake (String flavor) 
+	{
+		layers = 1;
+	}
+	// make a method that prints the flavor of the cake
+	public void getFlavor()
+	{
+		System.out.println("The flavor of this cake is " + this.flavor);
+	}
+	// make a method that prints the amount of layers in the cake
+	public void getLayers()
+	{
+		System.out.println("There are " + this.layers + " layers.");
+	}
+	// make a method that prints that the cake is tasty
+	public static void tellIfTasty()
+	{
+		System.out.println("This cake is tasty!");
+	}
+	// create a method that returns the flavor of the cake
+	public String setFlavor(String flavor)
+	{
+		return this.flavor;
+	}
+	// create a method that increases the layers by 1	
+	public int incrementLayer(int layers)
+	{
+		return layers++;
+	}
+	
+}
