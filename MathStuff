@@ -1,0 +1,55 @@
+public class MathStuff 
+{
+
+	public static void main(String[] args) 
+	{
+		// declare two numbers to test Math methods on
+		
+		int myInt = -4;
+		double myDub = -16.0;
+		
+		// test the sqrt method. it should find the square root
+		double mySqrt = Math.sqrt(myDub);
+		System.out.println(mySqrt);
+		
+		// test the abs method. it should produce absolute value
+		double myAbsDub = Math.abs(myDub);
+		System.out.println(myAbsDub);
+		
+		double myAbsInt = Math.abs(myInt);
+		System.out.println(myAbsInt);
+		
+		// test the pow method, it raises the first number to the power of the second number
+		// it only returns doubles
+		double base = 2.0;
+		double exp = 5.0;
+		double prod = Math.pow(base,exp);
+		System.out.println(prod);
+		
+		multTwoNums(7, 3);
+		
+		getRandomInt(1,10);
+		
+		
+	}
+	
+	public static void getRandomInt(int x, int y)
+	{
+		return 
+	}
+
+  // create a method that creates a for loop
+	public static void multTwoNums(int x, int y)
+	{
+  // decalre adder that equals x
+		int adder = x;
+  // make for loop that multiplies without using astric
+		for (int i = 1; i < y; i++)
+		{
+			x *= adder;
+  // print out outcome
+			System.out.println(x);
+		}
+	}
+
+}
