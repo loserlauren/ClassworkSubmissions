@@ -1,8 +1,17 @@
+import java.util.Random;
 public class MathStuff 
 {
 
 	public static void main(String[] args) 
 	{
+		
+		int q = 7;
+		int r = 2;
+		multTwoIntegers(q,r);
+		
+		int integerProduct = multTwoIntegers(q,r);
+		System.out.println(integerProduct);
+	
 		// declare two numbers to test Math methods on
 		
 		int myInt = -4;
@@ -26,30 +35,131 @@ public class MathStuff
 		double prod = Math.pow(base,exp);
 		System.out.println(prod);
 		
+		// TASK 1: instantiate an integer object
+		Integer myInteger = 4;
+		
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		
+		// TASK 2: instantiate a double object
+		Double myDouble = 6.6;
+		
+		System.out.println(Double.MAX_VALUE);
+		System.out.println(Double.MIN_VALUE);
+		
+		// TASK 3: declare an int and print is as a double
+		// this is called casting
+		int a = 5;
+		
+		System.out.println((double)a);
+		
+		// TASK 4: declare a double and print it as an int
+		// this is another example of casting
+		double b = 3.0;
+		
+		System.out.println((int)b);
+		
 		multTwoNums(7, 3);
 		
-		getRandomInt(1,10);
+		// TASK 1: create a method that generates random numbers between 1-10
+		Random random = new Random();
+		// declare an int equal to 0 instead of 1
+		int rand = 0;
+		// make while loop
+		while (true)
+		{
+			rand = random.nextInt(11);
+			if (rand != 0) break;
+		}
+		// print out random number
+		System.out.println(rand);
 		
-		
-	}
+		// TASK 2: declare two ints 
+		int intA = -36;
+		int intB = 12;
+		// TASK 3: declare two doubles
+		double dubA = -100.0;
+		double dubB = 0.64;
 	
-	public static void getRandomInt(int x, int y)
-	{
-		return 
+		// TASK 4: instantiate two Integer objects
+		Integer integerA = -36;
+		Integer integerB = 12;
+		// TASK 5: instantiate two Double objects
+		Double doubleA = -100.0;
+		Double doubleB = 0.64;
+		
+		// TASK 6: print out one int raised to the power of the other int
+		multTwoNums(intA,intB);
+		
+		// TASK 7: print out one Integer raised to the power of the other Integer
+		multTwoNums(integerA,integerB);
+		
+		// TASk 8: print out one double raised to the power of the other double
+		multTwoNums(dubA,dubB);
+		
+		// TASK 9: print out one Double raised to the power of the other Double
+		multTwoNums(doubleA,doubleB);
+		
+		// TASK 10: Print out the absolute value of intA, integerA, dubA, and doubleB
+		System.out.println(Math.abs(intA));
+		
+		System.out.println(Math.abs(integerA));
+		
+		System.out.println(Math.abs(dubA));
+		
+		System.out.println(Math.abs(doubleB));
+		
+		// TASK 11: Print out the square root of dubB and doubleB
+		System.out.println(Math.sqrt(dubB));
+		
+		System.out.println(Math.abs(doubleB));
+		
+		// TASK 12: Print out the square root of the absolute value of intA and integerA
+		System.out.println(Math.sqrt(Math.abs(intA)));
+		
+		System.out.println(Math.sqrt(Math.abs(integerA)));
+		
+		// TASK 13: Print out one double raised to the power of the other double
+		System.out.println(Math.pow(doubleA,doubleB));
+		
+		// TASK 14: Print out one int raised to the power of one of your doubles
+		System.out.println(Math.pow(intA, doubleB));
+		
+		// TASK 15: Print out one Double raised to the power of one of your Integers
+		System.out.println(Math.pow(doubleA, intB));
+	
 	}
-
-  // create a method that creates a for loop
+		// create a method that prints out an int raised 
+		// to the power of the other int
 	public static void multTwoNums(int x, int y)
 	{
-  // decalre adder that equals x
 		int adder = x;
-  // make for loop that multiplies without using astric
 		for (int i = 1; i < y; i++)
 		{
 			x *= adder;
-  // print out outcome
 			System.out.println(x);
 		}
 	}
+	
+		/**
+		 * This method takes in two Integer objects and returns their sum
+		 * as an int
+		 * even though the formal parameters are Integers,
+		 * it will turn passed ints into Integer automatically,
+		 * this process is called autoboxing
+		 * @param a the first additive
+		 * @param B the second additive
+		 * @return the sum of a and b as an int
+		 */
+		public static void multTwoIntegers(Integer x, Integer y)
+		{
+			int adder = x;
+			for (int i = 1; i < y; i++)
+			{
+				x *= adder;
+				System.out.println(x);
+			}
+		}
 
 }
+
