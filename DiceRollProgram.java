@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class DiceProgram {
 
 	public static void main(String[] args) {
@@ -19,6 +19,32 @@ public class DiceProgram {
 		
 		System.out.println("number of characters is " + n);
 		
+		// Create a scanner that receives the input of the user
+		Scanner myNum = new Scanner(System.in);
+		// make it into a string
+		String num = new String(myNum.nextLine());
+		
+		//declare an int for the index
+		int mid = num.indexOf('d');
+		
+		// create a string for both sides of the index
+		String left = num.substring(0, mid);
+		String right = num.substring(mid + 1);
+		
+		// create print statement
+		System.out.println("Your first number is " + left + " and your second number is " + right);
+		
+		// declare strings as an int in order to add them
+		int a = Integer.valueOf(left);
+		int b = Integer.valueOf(right);
+
+		// add two numbers together
+		int sum = a + b;
+		// print put out the sum
+		System.out.println("The sum of the two numbers is " + sum);
+		
+		// close the scanner so my laptop doesnt explode
+		myNum.close();
 	}
 	// method should count how many times the char shows 
 		// up in the String and return that number
@@ -37,7 +63,9 @@ public class DiceProgram {
 		
 		return x;
 	
-	}
+	}	
+	
+	
 	
 	
 
