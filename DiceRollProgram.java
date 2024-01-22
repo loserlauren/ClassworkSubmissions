@@ -11,12 +11,12 @@ public class DiceProgram {
 			System.out.println((int)(Math.random()*17 + 1));
 			i++;
 		}
-		// instantiate string and char
+		
 		String name1 = "humuhumunukunukaapuaa";
 		char char1 = 'a';
-		// declare an int for the char counter
+		
 		int n = countChars(name1, char1);
-		// print out the number of characters
+		
 		System.out.println("number of characters is " + n);
 		
 		// Create a scanner that receives the input of the user
@@ -27,11 +27,11 @@ public class DiceProgram {
 		//declare an int for the index
 		int mid = num.indexOf('d');
 		
-		// create strings for both sides of the index
+		// create a string for both sides of the index
 		String left = num.substring(0, mid);
 		String right = num.substring(mid + 1);
 		
-		// create print statement for both numbers
+		// create print statement
 		System.out.println("Your first number is " + left + " and your second number is " + right);
 		
 		// declare strings as an int in order to add them
@@ -39,19 +39,26 @@ public class DiceProgram {
 		int b = Integer.valueOf(right);
 
 		// add two numbers together
-		int sum = a + b;
+		// int sum = a + b;
 		// print put out the sum
-		System.out.println("The sum of the two numbers is " + sum);
+		// System.out.println("The sum of the two numbers is " + sum);
+		
+		int sum = 0;
+		
+		// create method
+		rollDice(a, b);
+		 
 		
 		// close the scanner so my laptop doesnt explode
 		myNum.close();
 	}
-	
+	// method should count how many times the char shows 
+		// up in the String and return that number
 	private static int countChars(String name1, char char1) 
 	{
-		// declare int set to 0
+		
 		int x = 0;
-		//create a for loop that finds the number of the assigned character
+		
 		for (int i = 0; i < name1.length(); i++) 
 		{
 			if (name1.charAt(i) == char1)
@@ -59,12 +66,37 @@ public class DiceProgram {
 				x++;
 			}
 		}
-		// return the number of characters for that letter
+		
 		return x;
 	
 	}	
 	
+
+	// create a method that generates random number from dice
+	public static int rollDice(int left, int right)
+	{
+		// declare strings as an int
+		int i = 0;
+		
+		int ans = 0;
+		
+		// create a while loop generator
+		while (i <= left)
+		{
+			// print out the result
+			int roll = ((int)(Math.random()*right + 1));
+			i++;
+			ans += roll;
 	
+		}
+		System.out.println("The sum of the numbers rolled is " + ans);
+
+		return ans;	
+		
+		
+	}
+	
+	// 
 	
 	
 
